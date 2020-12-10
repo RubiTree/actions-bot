@@ -27,6 +27,7 @@ def getResult(CSDN_ID):
             "profile": {}
         }
 
+        print("response.text：" + response.text)
         soup = BeautifulSoup(response.text, "html.parser")
 
         # 爬取asideProfile信息
@@ -106,8 +107,11 @@ def saveEmail(email_path, message):
 if __name__ == "__main__":
 
     CSDN_ID = sys.argv[1]
+    print("1")
 
     res = getResult(CSDN_ID)
+    print("2")
     message = formatMessage(res)
+    print("3")
     email_path = "email.txt"
     saveEmail(email_path, message)
