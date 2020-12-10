@@ -5,7 +5,7 @@ on:
     branches: 
       - master
   schedule:
-      - cron: '30,35,40,45,50 * * * *'
+      - cron: '30,35,41,46,51 * * * *'
 
 jobs:
   csdn-emailbot:
@@ -26,7 +26,7 @@ jobs:
       - name: 'Send mail'
         uses: dawidd6/action-send-mail@master
         with:
-          server_address: smtp.163.com
+          server_address: smtp.qq.com
           server_port: 465
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
