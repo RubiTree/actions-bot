@@ -75,7 +75,7 @@ def formatMessage(result):
 #     week_rank = "周排名： " + profile["week_rank"] + "\n"
 #     total_rank = "总排名： " + profile["total_rank"]
 
-    message += call + original + fans + like + comment + read + point + week_rank + total_rank
+    message += call + original + fans + like + comment + read
     return message
 
 
