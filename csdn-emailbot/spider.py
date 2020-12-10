@@ -43,19 +43,19 @@ def getResult(CSDN_ID):
         for num in data:
             profile_data.append(num.attrs["title"])
 
-        grade_info = soup.find("div", attrs={"class": "grade-box clearfix"}).contents
-        point = grade_info[5].find("dd").attrs["title"]
-        week_rank = grade_info[3].attrs["title"]
-        total_rank = grade_info[7].attrs["title"]
+#         grade_info = soup.find("div", attrs={"class": "grade-box clearfix"}).contents
+#         point = grade_info[5].find("dd").attrs["title"]
+#         week_rank = grade_info[3].attrs["title"]
+#         total_rank = grade_info[7].attrs["title"]
 
         profile["original"] = profile_data[0]
         profile["fans"] = profile_data[1]
         profile["like"] = profile_data[2]
         profile["comment"] = profile_data[3]
         profile["read"] = profile_data[4]
-        profile["point"] = point
-        profile["week_rank"] = week_rank
-        profile["total_rank"] = total_rank
+#         profile["point"] = point
+#         profile["week_rank"] = week_rank
+#         profile["total_rank"] = total_rank
         result["profile"] = profile
 
         return result
@@ -71,9 +71,9 @@ def formatMessage(result):
     like = "获赞： " + profile["like"] + "\n"
     comment = "评论： " + profile["comment"] + "\n"
     read = "访问量： " + profile["read"] + "\n"
-    point = "积分： " + profile["point"] + "\n"
-    week_rank = "周排名： " + profile["week_rank"] + "\n"
-    total_rank = "总排名： " + profile["total_rank"]
+#     point = "积分： " + profile["point"] + "\n"
+#     week_rank = "周排名： " + profile["week_rank"] + "\n"
+#     total_rank = "总排名： " + profile["total_rank"]
 
     message += call + original + fans + like + comment + read + point + week_rank + total_rank
     return message
