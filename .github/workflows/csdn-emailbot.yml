@@ -5,7 +5,7 @@ on:
     branches: 
       - master
   schedule:
-      - cron: '30,35,41,46,51 * * * *'
+      - cron: '30,35,42,47,52 * * * *'
 
 jobs:
   csdn-emailbot:
